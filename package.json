@@ -1,0 +1,13 @@
+{
+  "name": "campusfind",
+  "version": "1.0.0",
+  "description": "Simple SPSU lost and found mini project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "mysql2": "^3.24.6"
+  }
+}

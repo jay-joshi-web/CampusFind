@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusFind | SPSU Lost & Found</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>CampusFind</h1>
+        <p>SPSU Lost & Found Portal</p>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Lost something on campus?</h2>
+            <p>Report lost and found items at SPSU in one place.</p>
+        </section>
+
+        <section class="form-section">
+            <h2>Report an Item</h2>
+            <form id="itemForm">
+                <label for="item_name">Item name</label>
+                <input type="text" id="item_name" placeholder="e.g. Black wallet" required>
+
+                <label for="item_type">Report type</label>
+                <select id="item_type" required>
+                    <option value="">Select type</option>
+                    <option value="Lost">Lost</option>
+                    <option value="Found">Found</option>
+                </select>
+
+                <label for="category">Category</label>
+                <select id="category" required>
+                    <option value="">Select category</option>
+                    <option>Electronics</option>
+                    <option>Books & Stationery</option>
+                    <option>Personal Belongings</option>
+                    <option>Other</option>
+                </select>
+
+                <label for="location">Campus location</label>
+                <input type="text" id="location" placeholder="e.g. Library" required>
+
+                <label for="description">Description</label>
+                <textarea id="description" rows="3" placeholder="Add a few details (optional)"></textarea>
+
+                <label for="contact">Contact detail (email or phone)</label>
+                <input type="text" id="contact" placeholder="How can someone contact you?" required>
+
+                <button type="submit">Submit Report</button>
+                <p id="formMessage"></p>
+            </form>
+        </section>
+
+        <section class="reports-section">
+            <div class="reports-heading">
+                <div>
+                    <h2>Recent Reports</h2>
+                    <p>Items reported by the SPSU community.</p>
+                </div>
+                <select id="filterType" aria-label="Filter reports">
+                    <option value="All">All items</option>
+                    <option value="Lost">Lost</option>
+                    <option value="Found">Found</option>
+                </select>
+            </div>
+            <div id="itemList" class="item-list">
+                <p>Loading reports...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>CampusFind · Made for SPSU, Udaipur</p>
+    </footer>
+</body>
+</html>
